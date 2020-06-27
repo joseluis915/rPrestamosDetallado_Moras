@@ -70,12 +70,12 @@ namespace rPrestamosDetallado_Moras.UI.Registros
         //----------------------------------[ AGREGAR FILA - Registro Detallado ]----------------------------------
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
-            var filaDetalle = new MorasDetalle(int.Parse(IdTextBox.Text), moras.MoraId, int.Parse(PrestamoIdDetalleTextBox.Text), FechaDetalleaDataPicker.DisplayDate, Convert.ToSingle(ValorTextBox.Text));
+            var filaDetalle = new MorasDetalle(Convert.ToInt32(IdTextBox.Text), moras.MoraId, Convert.ToInt32(PrestamoIdDetalleTextBox.Text), FechaDetalleaDataPicker.DisplayDate, Convert.ToSingle(ValorTextBox.Text));
 
             moras.Detalle.Add(filaDetalle);
             Cargar();
 
-            
+            IdTextBox.Clear();
             ValorTextBox.Clear();
         }
         //----------------------------------[ REMOVER FILA - Registro Detallado ]----------------------------------
