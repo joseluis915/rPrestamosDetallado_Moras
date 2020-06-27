@@ -9,17 +9,17 @@ namespace rPrestamosDetallado_Moras.Entidades
     public class MorasDetalle
     {
         [Key]
-        public int Id { get; set; }
-        public int MorasId { get; set; }
+        public int IdDetalle { get; set; }
+        public int MoraId { get; set; }
         public int PrestamoId { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
+        public DateTime FechaMoraDetalle { get; set; } = DateTime.Now;
         public float Valor { get; set; }
-        public MorasDetalle(int morasId, int prestamoId, DateTime fecha, float valor)
+        public MorasDetalle(int idDetalle, int moraId, int prestamoId, DateTime fechaMoraDetalle, float valor)
         {
-            Id = 0;
-            MorasId = morasId;
+            IdDetalle = idDetalle;
+            MoraId = moraId;
             PrestamoId = prestamoId;
-            Fecha = fecha;
+            FechaMoraDetalle = fechaMoraDetalle;
             Valor = valor;
         }
     }

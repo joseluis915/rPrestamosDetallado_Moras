@@ -12,11 +12,11 @@ namespace rPrestamosDetallado_Moras.Entidades
     {
         [Key]
         public int MoraId { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
+        public DateTime FechaMora { get; set; } = DateTime.Now;
         public double Total { get; set; }
 
         //REGISTRO DETALLADO
-        [ForeignKey("PrestamoId")]
+        [ForeignKey("MoraId")]
         public List<MorasDetalle> Detalle { get; set; } = new List<MorasDetalle>();
     }
 }
